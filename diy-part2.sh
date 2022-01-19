@@ -11,4 +11,7 @@
 #
 
 # Modify default IP
+sed -i 's/-dhcp/-pppoe/g' package/base-files/files/lib/functions/uci-defaults.sh
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
+sed -i "s/username='username'/username='031601065709@adsl'/g" package/base-files/files/bin/config_generate
+sed -i "s/password='password'/password='006688'/g" package/base-files/files/bin/config_generate
